@@ -3,7 +3,9 @@ import QEA from "./qea";
 
 export default function Home() {
   return (
-    <Navbar/>
+    <div>
+    <Navbar />
     <QEA />
+    </div>
   );
 }
