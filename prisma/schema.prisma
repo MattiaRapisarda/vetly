@@ -12,3 +12,45 @@ datasource db {
   provider = "postgresql"
   url      = env("DATABASE_URL")
 }
+
+model Veterinario {
+  id              Int    @id @default(autoincrement()) // ID univoco
+  nome           String  // Nome del veterinario
+  cognome        String  // Cognome
+  email          String  @unique // Email (deve essere unica)
+  telefono       String // Numero di telefono (opzionale)
+  specializzazione String // Specializzazione veterinaria
+  annoLaurea     Int     // Anno di laurea
+  biografia      String // Biografia (opzionale)
+  createdAt      DateTime @default(now()) // Data di creazione automatica
+}
+
+model Utenti {
+  id              Int    @id @default(autoincrement()) // ID univoco
+  nome           String  // Nome del veterinario
+  cognome        String  // Cognome
+  email          String  @unique // Email (deve essere unica)
+  telefono       String? // Numero di telefono (opzionale)
+  password       String
+  createdAt      DateTime @default(now()) // Data di creazione automatica
+}
+
+model Richieste {
+  id                Int       @id @default(autoincrement()) // ID univoco per la richiesta
+  codice_conversazione String   @unique                    // Codice univoco della conversazione
+  id_utente         Int       // ID dell'utente
+  id_veterinario    Int       // ID del veterinario
+  id_messaggio      Int       // ID del messaggio più recente o legato alla conversazione
+  status            String    // Stato della conversazione (ad esempio "aperta", "chiusa")
+  createdAt         DateTime  @default(now()) // Data di creazione della richiesta
+  updatedAt         DateTime  @updatedAt // Data di aggiornamento (per monitorare la conversazione)
+}
+
+model Messaggi {
+  id                Int       @id @default(autoincrement()) // ID univoco per ogni messaggio
+  id_conversazione  String    // Codice della conversazione a cui appartiene il messaggio
+  contenuto         String    // Contenuto del messaggio
+  id_utente         Int       // ID dell'utente che invia il messaggio
+  id_veterinario    Int       // ID del veterinario che invia il messaggio
+  createdAt         DateTime  @default(now()) // Data di invio del messaggio
+}
