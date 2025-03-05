@@ -1,12 +1,10 @@
 import {
     NavigationMenu,
     NavigationMenuContent,
-    NavigationMenuIndicator,
     NavigationMenuItem,
     NavigationMenuLink,
     NavigationMenuList,
     NavigationMenuTrigger,
-    NavigationMenuViewport,
   } from "@radix-ui/react-navigation-menu"; // Assicurati che questo import sia corretto per la libreria che stai usando
   
   const Navbar = () => {
