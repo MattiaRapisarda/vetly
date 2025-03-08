@@ -89,12 +89,12 @@ export default function Navbar() {
       {/* Centro - Logo */}
       <div className="flex justify-center flex-1">
         <Link href="/" className="flex items-center text-2xl font-bold text-primary">
-          <Image src="/img/logo.png" alt="Vetly Logo" width={32} height={32} className="mr-2" />
+          <Image src="/img/logo.png" alt="Vetly Logo" width={120} height={120} className="mr-2" />
         </Link>
       </div>
 
       {/* Destra - Login e Registrati */}
-      <div className="flex items-center gap-4">
+      <div className="flex items-center gap-4 ml-auto">
         <Link href="/login" className="text-sm font-medium text-gray-700 hover:underline">
           Accedi
         </Link>
