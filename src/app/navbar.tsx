@@ -1,49 +1,70 @@
 "use client";
 
 import * as React from "react";
+import {
+  NavigationMenu,
+  NavigationMenuList,
+  NavigationMenuItem,
+  NavigationMenuTrigger,
+  NavigationMenuContent,
+} from "@radix-ui/react-navigation-menu";
+import { CaretDownIcon } from "@radix-ui/react-icons";
 import Link from "next/link";
 import Image from "next/image";
 
-export default function Navbar() {
+const Navbar = () => {
   return (
     <nav className="fixed top-0 left-0 w-full bg-transparent backdrop-blur-md bg-opacity-80 py-4 flex items-center justify-between z-50">
       {/* Sinistra - Menu di navigazione */}
       <div className="flex items-center gap-6 ml-40">
-        <ul className="flex space-x-6">
-          <li className="relative group">
-            <button className="colore-bianco">Perché ⥿</button>
-            <div className="absolute hidden group-hover:block w-48 mt-2 py-2 shadow-lg rounded-md">
-              <Link href="/about" className="block px-4 py-2 hover:bg-gray-100">
-                Chi siamo
-              </Link>
-              <Link href="/benefits" className="block px-4 py-2 hover:bg-gray-100">
-                Benefici
-              </Link>
-            </div>
-          </li>
-          <li className="relative group">
-            <button className="colore-bianco">Veterinari ⥿</button>
-            <div className="absolute hidden group-hover:block w-48 mt-2 py-2 bg-white shadow-lg rounded-md">
-              <Link href="/vets" className="block px-4 py-2 hover:bg-gray-100">
-                Trova un veterinario
-              </Link>
-              <Link href="/join" className="block px-4 py-2 hover:bg-gray-100">
-                Diventa un partner
-              </Link>
-            </div>
-          </li>
-          <li className="relative group">
-            <button className="colore-bianco">Come funziona ⥿</button>
-            <div className="absolute hidden group-hover:block w-48 mt-2 py-2 bg-white shadow-lg rounded-md">
-              <Link href="/how-it-works" className="block px-4 py-2 hover:bg-gray-100">
-                Il nostro servizio
-              </Link>
-              <Link href="/faq" className="block px-4 py-2 hover:bg-gray-100">
-                Domande frequenti
-              </Link>
-            </div>
-          </li>
-        </ul>
+        <NavigationMenu>
+          <NavigationMenuList className="flex space-x-6">
+            {/* Menu "Perché" */}
+            <NavigationMenuItem>
+              <NavigationMenuTrigger className="group flex items-center justify-between gap-2 px-3 py-2 text-white">
+                Perché <CaretDownIcon className="text-white transition-transform duration-250 ease-in group-data-[state=open]:-rotate-180" />
+              </NavigationMenuTrigger>
+              <NavigationMenuContent className="absolute left-0 w-48 mt-2 py-2 bg-white shadow-lg rounded-md z-50">
+                <Link href="/about" className="block px-4 py-2 hover:bg-gray-100">
+                  Chi siamo
+                </Link>
+                <Link href="/benefits" className="block px-4 py-2 hover:bg-gray-100">
+                  Benefici
+                </Link>
+              </NavigationMenuContent>
+            </NavigationMenuItem>
+
+            {/* Menu "Veterinari" */}
+            <NavigationMenuItem>
+              <NavigationMenuTrigger className="group flex items-center justify-between gap-2 px-3 py-2 text-white">
+                Veterinari <CaretDownIcon className="text-white transition-transform duration-250 ease-in group-data-[state=open]:-rotate-180" />
+              </NavigationMenuTrigger>
+              <NavigationMenuContent className="absolute left-0 w-48 mt-2 py-2 bg-white shadow-lg rounded-md z-50">
+                <Link href="/vets" className="block px-4 py-2 hover:bg-gray-100">
+                  Trova un veterinario
+                </Link>
+                <Link href="/join" className="block px-4 py-2 hover:bg-gray-100">
+                  Diventa un partner
+                </Link>
+              </NavigationMenuContent>
+            </NavigationMenuItem>
+
+            {/* Menu "Come funziona" */}
+            <NavigationMenuItem>
+              <NavigationMenuTrigger className="group flex items-center justify-between gap-2 px-3 py-2 text-white">
+                Come funziona <CaretDownIcon className="text-white transition-transform duration-250 ease-in group-data-[state=open]:-rotate-180" />
+              </NavigationMenuTrigger>
+              <NavigationMenuContent className="absolute left-0 w-48 mt-2 py-2 bg-white shadow-lg rounded-md z-50">
+                <Link href="/how-it-works" className="block px-4 py-2 hover:bg-gray-100">
+                  Il nostro servizio
+                </Link>
+                <Link href="/faq" className="block px-4 py-2 hover:bg-gray-100">
+                  Domande frequenti
+                </Link>
+              </NavigationMenuContent>
+            </NavigationMenuItem>
+          </NavigationMenuList>
+        </NavigationMenu>
       </div>
 
       {/* Centro - Logo */}
@@ -55,16 +76,18 @@ export default function Navbar() {
 
       {/* Destra - Accedi e Registrati */}
       <div className="flex items-center gap-4 mr-40">
-        <Link href="/login" className="">
-          <span className="colore-bianco">Accedi</span>
+        <Link href="/login" className="text-white">
+          Accedi
         </Link>
         <Link
           href="/register"
-          className="px-4 py-2 text-white bg-colore-bottoni rounded-full hover:bg-purple-600"
+          className="px-4 py-2 text-white bg-purple-500 rounded-full hover:bg-purple-600"
         >
-          <span className="colore-bianco">Registrati</span>
+          Registrati
         </Link>
       </div>
     </nav>
   );
-}
+};
+
+export default Navbar;
