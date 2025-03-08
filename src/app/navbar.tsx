@@ -16,9 +16,9 @@ export default function Navbar() {
   return (
     <NavigationMenu className="flex w-full items-center justify-between p-4 bg-opacity-80 backdrop-blur-md">
       {/* Sinistra - Logo e voci del menu */}
-      <div className="flex items-center gap-6">
+      <div className="flex justify-center gap-6">
       <Link href="/" className="flex items-center text-2xl font-bold text-primary">
-  <Image src="/logo.png" alt="Vetly Logo" width={32} height={32} className="mr-2" />
+  <Image src="/img/logo.png" alt="Vetly Logo" width={32} height={32} className="mr-2" />
   Vetly
 </Link>
         <NavigationMenuList>
