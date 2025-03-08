@@ -129,14 +129,30 @@
   color: #fcfbf7;
 }
 
+.bg-colore-bianco{
+  background-color: #fcfbf7;
+}
+
 .colore-bottoni{
   color: #b5b5ea;
+}
+
+.bg-colore-bottoni{
+  background-color: #b5b5ea;
 }
 
 .colore-secondario{
   color: #c5df94;
 }
 
+.bg-colore-secondario{
+  background-color: #c5df94;
+}
+
 .colore-primario{
   color: #1e475d;
+}
+
+.bg-colore-primario{
+  background-color: #1e475d;
 }
