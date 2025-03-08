@@ -3,7 +3,7 @@ import QEA from "./qea";
 
 export default function Home() {
   return (
-    <div>
+    <div className="w-full">
     <Navbar />
     <QEA />
     </div>
