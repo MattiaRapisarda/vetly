@@ -46,39 +46,41 @@ export default function Home() {
       </div>
 
       {/* Div verde sotto l'immagine, occupa l'ultima parte della viewport */}
-<div className="w-full h-30 bg-colore-secondario flex justify-center items-center colore-primario">
-  <div className="flex space-x-13 -mt-20 items-center">
-    {/* Div laterale sinistro */}
-    <div className="bg-colore-bianco rounded-lg p-6 shadow-md w-65 h-24 hover:w-80 hover:h-36 transition-all duration-300 ease-in-out relative z-40">
-      <div className="flex items-center mb-4">
-        <h3 className="text-lg font-semibold">Il Giusto Vet per le Esigenze Pet</h3>
-      </div>
-      {/* Testo che appare al passaggio del mouse */}
-      <p className="absolute inset-0 text-left text-sm opacity-0 hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-        Scopri di più sul nostro servizio veterinario!
-      </p>
-    </div>
+      <div className="w-full h-30 bg-colore-secondario flex justify-center items-center colore-primario">
+        <div className="flex space-x-13 -mt-20 items-center">
+          {/* Div laterale sinistro */}
+          <div className="bg-colore-bianco rounded-lg p-6 shadow-md w-65 h-24 hover:cursor-default hover:w-80 hover:h-36 transition-all duration-300 ease-in-out relative z-40 group">
+            <div className="flex items-center mb-4">
+              <h3 className="text-lg font-semibold">Il Giusto Vet per le Esigenze Pet</h3>
+            </div>
+            {/* Testo che appare al passaggio del mouse sull'intero box */}
+            <p className="absolute flex items-center justify-center text-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+              Scopri di più sul nostro servizio veterinario!
+            </p>
+          </div>
 
-    {/* Div centrale */}
-    <div className="bg-colore-bianco rounded-lg p-6 shadow-md w-80 h-36 z-40">
-      <div className="flex items-center mb-4">
-        <h3 className="text-lg font-semibold">Consulenza Pre Ambulatoriale</h3>
-      </div>
-    </div>
+          {/* Div centrale */}
+          <div className="bg-colore-bianco rounded-lg p-6 shadow-md w-80 h-36 z-40">
+            <div className="flex items-center mb-4">
+              <h3 className="text-lg font-semibold">Consulenza Pre Ambulatoriale</h3>
+            </div>
+            <p className="colore-primario text-sm">
+              Ricevi una risposta rapida dal nostro team di esperti!
+            </p>
+          </div>
 
-    {/* Div laterale destro */}
-    <div className="bg-colore-bianco rounded-lg p-6 shadow-md w-65 h-24 hover:w-80 hover:h-36 transition-all duration-300 ease-in-out relative z-40">
-      <div className="flex items-center mb-4">
-        <h3 className="text-lg font-semibold">Risposta dal Vet Entro 12h</h3>
+          {/* Div laterale destro */}
+          <div className="bg-colore-bianco rounded-lg p-6 shadow-md w-65 h-24 hover:cursor-default hover:w-80 hover:h-36 transition-all duration-300 ease-in-out relative z-40 group">
+            <div className="flex items-center mb-4">
+              <h3 className="text-lg font-semibold">Risposta dal Vet Entro 12h</h3>
+            </div>
+            {/* Testo che appare al passaggio del mouse sull'intero box */}
+            <p className="absolute flex items-center justify-center text-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+              Ricevi una risposta rapida dal nostro team di esperti!
+            </p>
+          </div>
+        </div>
       </div>
-      {/* Testo che appare al passaggio del mouse */}
-      <p className="absolute inset-0 text-center text-sm opacity-0 hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-        Ricevi una risposta rapida dal nostro team di esperti!
-      </p>
-    </div>
-  </div>
-</div>
-
     </div>
   );
 }
