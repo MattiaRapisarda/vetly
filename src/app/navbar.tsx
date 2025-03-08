@@ -14,7 +14,7 @@ import {
 
 export default function Navbar() {
   return (
-    <NavigationMenu className="flex w-full items-center p-4 bg-opacity-80 backdrop-blur-md">
+    <NavigationMenu className="flex w-full items-center justify-between p-4 bg-opacity-80 backdrop-blur-md">
       {/* Sinistra - Voci del menu */}
       <div className="flex gap-6">
         <NavigationMenuList>
@@ -87,14 +87,14 @@ export default function Navbar() {
       </div>
 
       {/* Centro - Logo */}
-      <div className="flex-1 flex justify-center">
+      <div className="absolute left-1/2 transform -translate-x-1/2">
         <Link href="/" className="flex items-center text-2xl font-bold text-primary">
-          <Image src="/img/logo.png" alt="Vetly Logo" width={100} height={100} className="mr-2" />
+          <Image src="/img/logo.png" alt="Vetly Logo" width={32} height={32} className="mr-2" />
         </Link>
       </div>
 
       {/* Destra - Login e Registrati */}
-      <div className="flex items-center gap-4 ml-auto">
+      <div className="flex items-center gap-4">
         <Link href="/login" className="text-sm font-medium text-gray-700 hover:underline">
           Accedi
         </Link>
