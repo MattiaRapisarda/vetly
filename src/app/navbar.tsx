@@ -88,9 +88,10 @@ export default function Navbar() {
         </div>
 
         {/* Centro - Logo */}
-        <div className="flex justify-center flex-grow">
-          <Link href="/" className="flex items-center text-2xl font-bold text-primary">
-            <Image src="/img/logo.png" alt="Vetly Logo" width={100} height={100} className="mr-2" />
+        <div className="flex flex-col items-center flex-grow">
+          <Link href="/" className="flex flex-col items-center text-2xl font-bold text-primary">
+            <Image src="/img/logo.png" alt="Vetly Logo" width={80} height={80} className="mb-1" />
+            <span className="text-xs text-gray-600">NO STRESS, JUST VET CARE</span>
           </Link>
         </div>
 
@@ -101,7 +102,7 @@ export default function Navbar() {
           </Link>
           <Link
             href="/register"
-            className="px-4 py-2 text-sm font-medium text-white bg-purple-500 rounded-lg hover:bg-purple-600"
+            className="px-4 py-2 text-sm font-medium text-white bg-purple-500 rounded-full hover:bg-purple-600"
           >
             Registrati
           </Link>
