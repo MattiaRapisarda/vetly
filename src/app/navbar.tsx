@@ -16,7 +16,7 @@ export default function Navbar() {
   return (
     <NavigationMenu className="flex w-full items-center justify-between p-4 bg-opacity-80 backdrop-blur-md">
       {/* Sinistra - Voci del menu */}
-      <div className="flex gap-6">
+      <div className="flex items-center gap-6">
         <NavigationMenuList>
           <NavigationMenuItem>
             <NavigationMenuTrigger>Perché</NavigationMenuTrigger>
@@ -87,9 +87,9 @@ export default function Navbar() {
       </div>
 
       {/* Centro - Logo */}
-      <div className="absolute left-1/2 transform -translate-x-1/2">
+      <div className="flex-1 flex justify-center">
         <Link href="/" className="flex items-center text-2xl font-bold text-primary">
-          <Image src="/img/logo.png" alt="Vetly Logo" width={32} height={32} className="mr-2" />
+          <Image src="/img/logo.png" alt="Vetly Logo" width={100} height={100} className="mr-2" />
         </Link>
       </div>
 
