@@ -14,96 +14,98 @@ import {
 
 export default function Navbar() {
   return (
-    <NavigationMenu className="flex w-full items-center justify-between p-4 bg-opacity-80 backdrop-blur-md">
-      {/* Sinistra - Voci del menu */}
-      <div className="flex items-center gap-6">
-        <NavigationMenuList>
-          <NavigationMenuItem>
-            <NavigationMenuTrigger>Perché</NavigationMenuTrigger>
-            <NavigationMenuContent>
-              <ul className="p-2 bg-white shadow-lg rounded-md">
-                <li>
-                  <NavigationMenuLink asChild>
-                    <Link href="/about" className="block px-4 py-2 hover:bg-gray-100">
-                      Chi siamo
-                    </Link>
-                  </NavigationMenuLink>
-                </li>
-                <li>
-                  <NavigationMenuLink asChild>
-                    <Link href="/benefits" className="block px-4 py-2 hover:bg-gray-100">
-                      Benefici
-                    </Link>
-                  </NavigationMenuLink>
-                </li>
-              </ul>
-            </NavigationMenuContent>
-          </NavigationMenuItem>
+    <NavigationMenu className="w-full p-4 bg-opacity-80 backdrop-blur-md">
+      <div className="flex items-center justify-between w-full">
+        {/* Sinistra - Menu di navigazione */}
+        <div className="flex items-center gap-6">
+          <NavigationMenuList>
+            <NavigationMenuItem>
+              <NavigationMenuTrigger>Perché</NavigationMenuTrigger>
+              <NavigationMenuContent>
+                <ul className="p-2 bg-white shadow-lg rounded-md">
+                  <li>
+                    <NavigationMenuLink asChild>
+                      <Link href="/about" className="block px-4 py-2 hover:bg-gray-100">
+                        Chi siamo
+                      </Link>
+                    </NavigationMenuLink>
+                  </li>
+                  <li>
+                    <NavigationMenuLink asChild>
+                      <Link href="/benefits" className="block px-4 py-2 hover:bg-gray-100">
+                        Benefici
+                      </Link>
+                    </NavigationMenuLink>
+                  </li>
+                </ul>
+              </NavigationMenuContent>
+            </NavigationMenuItem>
 
-          <NavigationMenuItem>
-            <NavigationMenuTrigger>Veterinari</NavigationMenuTrigger>
-            <NavigationMenuContent>
-              <ul className="p-2 bg-white shadow-lg rounded-md">
-                <li>
-                  <NavigationMenuLink asChild>
-                    <Link href="/vets" className="block px-4 py-2 hover:bg-gray-100">
-                      Trova un veterinario
-                    </Link>
-                  </NavigationMenuLink>
-                </li>
-                <li>
-                  <NavigationMenuLink asChild>
-                    <Link href="/join" className="block px-4 py-2 hover:bg-gray-100">
-                      Diventa un partner
-                    </Link>
-                  </NavigationMenuLink>
-                </li>
-              </ul>
-            </NavigationMenuContent>
-          </NavigationMenuItem>
+            <NavigationMenuItem>
+              <NavigationMenuTrigger>Veterinari</NavigationMenuTrigger>
+              <NavigationMenuContent>
+                <ul className="p-2 bg-white shadow-lg rounded-md">
+                  <li>
+                    <NavigationMenuLink asChild>
+                      <Link href="/vets" className="block px-4 py-2 hover:bg-gray-100">
+                        Trova un veterinario
+                      </Link>
+                    </NavigationMenuLink>
+                  </li>
+                  <li>
+                    <NavigationMenuLink asChild>
+                      <Link href="/join" className="block px-4 py-2 hover:bg-gray-100">
+                        Diventa un partner
+                      </Link>
+                    </NavigationMenuLink>
+                  </li>
+                </ul>
+              </NavigationMenuContent>
+            </NavigationMenuItem>
 
-          <NavigationMenuItem>
-            <NavigationMenuTrigger>Come funziona</NavigationMenuTrigger>
-            <NavigationMenuContent>
-              <ul className="p-2 bg-white shadow-lg rounded-md">
-                <li>
-                  <NavigationMenuLink asChild>
-                    <Link href="/how-it-works" className="block px-4 py-2 hover:bg-gray-100">
-                      Il nostro servizio
-                    </Link>
-                  </NavigationMenuLink>
-                </li>
-                <li>
-                  <NavigationMenuLink asChild>
-                    <Link href="/faq" className="block px-4 py-2 hover:bg-gray-100">
-                      Domande frequenti
-                    </Link>
-                  </NavigationMenuLink>
-                </li>
-              </ul>
-            </NavigationMenuContent>
-          </NavigationMenuItem>
-        </NavigationMenuList>
-      </div>
+            <NavigationMenuItem>
+              <NavigationMenuTrigger>Come funziona</NavigationMenuTrigger>
+              <NavigationMenuContent>
+                <ul className="p-2 bg-white shadow-lg rounded-md">
+                  <li>
+                    <NavigationMenuLink asChild>
+                      <Link href="/how-it-works" className="block px-4 py-2 hover:bg-gray-100">
+                        Il nostro servizio
+                      </Link>
+                    </NavigationMenuLink>
+                  </li>
+                  <li>
+                    <NavigationMenuLink asChild>
+                      <Link href="/faq" className="block px-4 py-2 hover:bg-gray-100">
+                        Domande frequenti
+                      </Link>
+                    </NavigationMenuLink>
+                  </li>
+                </ul>
+              </NavigationMenuContent>
+            </NavigationMenuItem>
+          </NavigationMenuList>
+        </div>
 
-      {/* Centro - Logo */}
-      <div className="flex-1 flex justify-center">
-        <Link href="/" className="flex items-center text-2xl font-bold text-primary">
-          <Image src="/img/logo.png" alt="Vetly Logo" width={100} height={100} className="mr-2" />
-        </Link>
-      </div>
+        {/* Centro - Logo */}
+        <div className="flex justify-center flex-grow">
+          <Link href="/" className="flex items-center text-2xl font-bold text-primary">
+            <Image src="/img/logo.png" alt="Vetly Logo" width={100} height={100} className="mr-2" />
+          </Link>
+        </div>
 
-      {/* Destra - Login e Registrati */}
-      <div className="flex items-center gap-4">
-        <Link href="/login" className="text-sm font-medium text-gray-700 hover:underline">
-          Accedi
-        </Link>
-        <Link
-          href="/register"
-          className="px-4 py-2 text-sm font-medium text-white bg-purple-500 rounded-lg hover:bg-purple-600"
-        >
-          Registrati
-        </Link>
+        {/* Destra - Accedi e Registrati */}
+        <div className="flex items-center gap-4">
+          <Link href="/login" className="text-sm font-medium text-gray-700 hover:underline">
+            Accedi
+          </Link>
+          <Link
+            href="/register"
+            className="px-4 py-2 text-sm font-medium text-white bg-purple-500 rounded-lg hover:bg-purple-600"
+          >
+            Registrati
+          </Link>
+        </div>
       </div>
     </NavigationMenu>
   )
