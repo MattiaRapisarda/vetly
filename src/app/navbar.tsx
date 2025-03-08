@@ -87,7 +87,7 @@ export default function Navbar() {
       </div>
 
       {/* Centro - Logo */}
-      <div className="flex-grow flex justify-center">
+      <div className="flex-1 flex justify-center">
         <Link href="/" className="flex items-center text-2xl font-bold text-primary">
           <Image src="/img/logo.png" alt="Vetly Logo" width={100} height={100} className="mr-2" />
         </Link>
