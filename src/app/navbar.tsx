@@ -87,11 +87,10 @@ export default function Navbar() {
           </NavigationMenuList>
         </div>
 
-        {/* Centro - Logo */}
-        <div className="flex flex-col items-center flex-grow">
-          <Link href="/" className="flex flex-col items-center text-2xl font-bold text-primary">
-            <Image src="/img/logo.png" alt="Vetly Logo" width={80} height={80} className="mb-1" />
-            <span className="text-xs text-gray-600">NO STRESS, JUST VET CARE</span>
+{/* Centro - Logo */}
+<div className="flex flex-col items-center flex-grow">
+          <Link href="/" className="flex items-center text-2xl font-bold text-primary">
+            <Image src="/img/logo.png" alt="Vetly Logo" width={80} height={80} />
           </Link>
         </div>
 
