@@ -11,7 +11,7 @@ export default function Navbar() {
       <div className="flex items-center gap-6 ml-40">
         <ul className="flex space-x-6">
           <li className="relative group">
-            <button className="colore-bianco">Perché</button>
+            <button className="colore-bianco">Perché ⥿</button>
             <div className="absolute hidden group-hover:block w-48 mt-2 py-2 shadow-lg rounded-md">
               <Link href="/about" className="block px-4 py-2 hover:bg-gray-100">
                 Chi siamo
@@ -22,7 +22,7 @@ export default function Navbar() {
             </div>
           </li>
           <li className="relative group">
-            <button className="colore-bianco">Veterinari</button>
+            <button className="colore-bianco">Veterinari ⥿</button>
             <div className="absolute hidden group-hover:block w-48 mt-2 py-2 bg-white shadow-lg rounded-md">
               <Link href="/vets" className="block px-4 py-2 hover:bg-gray-100">
                 Trova un veterinario
@@ -33,7 +33,7 @@ export default function Navbar() {
             </div>
           </li>
           <li className="relative group">
-            <button className="colore-bianco">Come funziona</button>
+            <button className="colore-bianco">Come funziona ⥿</button>
             <div className="absolute hidden group-hover:block w-48 mt-2 py-2 bg-white shadow-lg rounded-md">
               <Link href="/how-it-works" className="block px-4 py-2 hover:bg-gray-100">
                 Il nostro servizio
