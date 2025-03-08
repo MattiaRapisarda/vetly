@@ -3,7 +3,7 @@ import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/
 
 const QEA = () => (
   <div className="flex justify-center items-center min-h-screen bg-gray-100 p-8">
-    <div className="w-full max-w-4xl p-6 bg-white shadow-lg rounded-lg flex gap-6">
+    <div className="w-full max-w-4xl p-6 bg-white shadow-lg rounded-lg flex gap-6 items-start">
       {/* Prima colonna */}
       <Accordion
         className="w-1/2 rounded-md bg-mauve6 shadow-md"
